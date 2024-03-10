@@ -80,15 +80,35 @@ a {
   text-align: center;
 }
 
-.hero-accion {
-  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
-    url("../imagenes/accion.jpg");
-}
 .hero-todos {
   background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
     url("../imagenes/todos.jpg");
 }
-.parallax {
+
+.hero-accion {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/accion.jpg");
+}
+
+.hero-terror {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/terror.jpg");
+}
+
+.hero-deportes {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/deportes.jpg");
+}
+.hero-disparos {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/disparos.jpg");
+}
+.hero-rol {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/rol.jpg");
+}
+
+.hero- .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
