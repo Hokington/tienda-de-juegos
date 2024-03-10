@@ -11,6 +11,8 @@
 body {
   font-family: "Poppins";
   font-weight: 400;
+  background-color: var(--text);
+  margin: 0px;
 }
 
 h1,
@@ -50,11 +52,6 @@ small {
   font-size: 0.75rem; /* 12px */
 }
 
-body {
-  background-color: var(--background);
-  margin: 0px;
-}
-
 img {
   max-width: 100%;
   border-radius: 4px;
@@ -65,29 +62,47 @@ a {
   text-decoration: none;
   display: block;
 }
+
 .logo {
   font-weight: bold;
   text-align: center;
   margin-bottom: 16px;
+  color: var(--background);
 }
 
 .hero {
-  min-height: 360px;
-  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
-    url("../Imagenes/todos.jpg");
   color: var(--accent);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px;
+  min-height: 380px;
+  text-align: center;
+}
+
+.hero-accion {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/accion.jpg");
+}
+.hero-todos {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../imagenes/todos.jpg");
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .titulo {
   text-align: center;
   margin-bottom: 16px;
+  color: var(--accent);
 }
 .seccion-categorias {
   background-color: var(--primary);
+  text-align: center;
   padding: 2px;
 }
 .lista-categorias {

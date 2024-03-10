@@ -7,27 +7,49 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <h1 class="logo">MicroPlay 2</h1>
-    <h2>Accion</h2>
-    <img src="Imagenes/accion.jpg" alt="" />
-    <h3>Categorias</h3>
-    <ul>
-      <li><a href="index.html">Todos</a></li>
-      <li><a href="accion.html">Accion</a></li>
-      <li><a href="deportes.html">Deportes</a></li>
-      <li><a href="rol.html">Rol</a></li>
-      <li><a href="terror.html">Terror</a></li>
-      <li><a href="disparos.html">Disparos</a></li>
-    </ul>
+    <a href="/">
+      <h1 class="logo">MicroPlay 2</h1>
+    </a>
 
-   <a href="accion1.html"><img src="Imagenes/accion1.jpg" alt="God of War: Ragnarok"
-      style="width: 400px; height: 500px;"></a>
-    <a href="accion1.html">God of War: Ragnarok</a>
-    <h3>$ 59.990</h3>
+    <section class="hero hero-accion parallax">
+      <h2>Accion</h2>
+    </section>
 
-  <a href="accion2.html"><img src="Imagenes/accion2.jpg" alt="Final Fantasy XVI"
-      style="width: 400px; height: 450px;"></a>    
-  <a href="accion2.html">Final Fantasy XVI</a>
-  <h3>$ 59.990</h3>
+    <section class="seccion-categorias">
+      <h2>Categorias</h2>
+      <ul class="lista-categorias">
+        <li><a href="index.html">Todos</a></li>
+        <li><a href="accion.html">Accion</a></li>
+        <li><a href="deportes.html">Deportes</a></li>
+        <li><a href="rol.html">Rol</a></li>
+        <li><a href="terror.html">Terror</a></li>
+        <li><a href="disparos.html">Disparos</a></li>
+      </ul>
+    </section>
+
+    <main>
+      <h2 class="titulo">Juegos de acción</h2>
+      <div class="lista-juegos">
+        <a class="card" href="accion1.html"
+          ><img
+            src="Imagenes/accion1.jpg"
+            alt="God of War: Ragnarok"
+            style="width: 400px; height: 500px"
+          />
+          <h3>God of War: Ragnarok</h3>
+          <span>$ 59.990</span>
+        </a>
+
+        <a class="card" href="accion2.html">
+          <img
+            src="Imagenes/accion2.jpg"
+            alt="Final Fantasy XVI"
+            style="width: 400px; height: 450px"
+          />
+          <h3>Final Fantasy XVI</h3>
+          <span>$ 59.990</span>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
