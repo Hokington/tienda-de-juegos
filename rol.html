@@ -7,25 +7,49 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <h1>NOMBRE PYME</h1>
-    <h2>Rol</h2>
-    <img src="Imagenes/rol.jpg" alt="" />
-    <h3>Categorias</h3>
-    <ul>
-      <li><a href="index.html">Todos</a></li>
-      <li><a href="accion.html">Accion</a></li>
-      <li><a href="deportes.html">Deportes</a></li>
-      <li><a href="rol.html">Rol</a></li>
-      <li><a href="terror.html">Terror</a></li>
-      <li><a href="disparos.html">Disparos</a></li>
-    </ul>
+    <a href="/">
+      <h1 class="logo">MicroPlay 2</h1>
+    </a>
 
-    <a href="rol1.html"><img src="Imagenes/rol1.jpg" alt="Elden Ring" style="width: 400px; height: 500px;" />
-    <a href="rol1.html">Elden Ring</a>
-    <h3>$ 59.990</h3>
+    <section class="hero hero-accion parallax">
+      <h2>Rol</h2>
+    </section>
 
-    <a href="rol2.html"><img src="Imagenes/rol2.jpg" alt="Baldur's Gate 3" style="width: 400px; height: 500px;" />
-    <a href="rol2.html">Baldur's Gate 3</a>
-    <h3>$ 59.990</h3>
+    <section class="seccion-categorias">
+      <h2>Categorias</h2>
+      <ul class="lista-categorias">
+        <li><a href="index.html">Todos</a></li>
+        <li><a href="accion.html">Accion</a></li>
+        <li><a href="deportes.html">Deportes</a></li>
+        <li><a href="rol.html">Rol</a></li>
+        <li><a href="terror.html">Terror</a></li>
+        <li><a href="disparos.html">Disparos</a></li>
+      </ul>
+    </section>
+
+    <main>
+      <h2 class="titulo">Juegos de rol</h2>
+      <div class="lista-juegos">
+        <a class="card" href="rol1.html"
+          ><img
+            src="Imagenes/rol1.jpg"
+            alt="Elden Ring"
+            style="width: 400px; height: 500px"
+          />
+          <h3>Elden Ring</h3>
+          <span>$ 59.990</span>
+        </a>
+
+        <a class="card" href="rol2.html">
+          <img
+            src="Imagenes/rol2.jpg"
+            alt="Baldur's Gate 3 "
+            style="width: 400px; height: 450px"
+          />
+          <h3>Baldur's Gate 3</h3>
+          <span>$ 59.990</span>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
