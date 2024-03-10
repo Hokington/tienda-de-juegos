@@ -99,16 +99,18 @@ a {
   background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
     url("../imagenes/deportes.jpg");
 }
+
 .hero-disparos {
   background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
     url("../imagenes/disparos.jpg");
 }
+
 .hero-rol {
   background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
     url("../imagenes/rol.jpg");
 }
 
-.hero- .parallax {
+.parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
