@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400");
+
+:root {
+  --text: #070606;
+  --background: #fdfbfb;
+  --primary: #c84b47;
+  --secondary: #ed8d8a;
+  --accent: #f8413b;
+}
+
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+body {
+  background-color: var(--background);
+  margin: 0px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+}
+.logo {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.hero {
+  min-height: 360px;
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../Imagenes/todos.jpg");
+  color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.seccion-categorias {
+  background-color: var(--primary);
+  padding: 2px;
+}
+.lista-categorias {
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 48px;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+}
+.lista-categorias li {
+  background-color: var(--background);
+  text-decoration: none;
+  font-size: 24px;
+  border-radius: 6px;
+  border: var(--accent);
+  border-style: solid;
+  padding: 6px 12px;
+}
+
+.lista-juegos {
+  display: grid;
+  padding: 48px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.card {
+  background-color: var(--accent);
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h3 {
+  font-size: 18px;
+}
+.card span {
+  background-color: var(--background);
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 24px;
+  font-style: italic;
+}
+.card img {
+  object-fit: cover;
+}
