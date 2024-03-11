@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Disparos</title>
-    <link rel="stylesheet" href="css/app.css" />
-  </head>
-  <body>
-    <h1>NOMBRE PYME</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disparos</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <a href="/">
+    <h1 class="logo">MicroPlay 2</h1>
+  </a>
+  <section class="hero hero-disparos parallax">
     <h2>Disparos</h2>
-    <img src="Imagenes/disparos.jpg" alt="" />
+  </section>
+
+  <section class="seccion-categorias">
     <h3>Categorias</h3>
-    <ul>
+    <ul class="lista-categorias">
       <li><a href="index.html">Todos</a></li>
       <li><a href="accion.html">Accion</a></li>
       <li><a href="deportes.html">Deportes</a></li>
@@ -19,15 +26,22 @@
       <li><a href="terror.html">Terror</a></li>
       <li><a href="disparos.html">Disparos</a></li>
     </ul>
+  </section>
 
-    <a href="disparos1.html"><img src="Imagenes/disparos1.jpg" alt="Call of Duty: Modern Warfare III"
-      style="width: 400px; height: 500px;"></a>
-    <a href="disparos1.html">Call of Duty: Modern Warfare III</a>
-    <h3>$ 59.990</h3>
+  <main>
+    <h2 class="titulo">Juegos de Disparos</h2>
+    <div class="lista-juegos">
+      <a class="card" href="disparos1.html"><img src="Imagenes/disparos1.jpg" alt="Call of Duty: Modern Warfare III" />
+        <h3 href="disparos1.html">Call of Duty: Modern Warfare III</h3>
+        <span>$ 59.990</span>
+      </a>
 
-    <a href="disparos2.html"><img src="Imagenes/disparos2.jpg" alt="Battlefield™ 2042"
-      style="width: 400px; height: 500px;"></a>
-    <a href="disparos2.html">Battlefield™ 2042</a>
-    <h3>$ 59.990</h3>
-  </body>
+      <a class="card" href="disparos2.html"><img src="Imagenes/disparos2.jpg" alt="Battlefield™ 2042" />
+        <h3 href="disparos2.html">Battlefield™ 2042</h3>
+        <span>$ 59.990</span>
+      </a>
+    </div>
+  </main>
+</body>
+
 </html>
