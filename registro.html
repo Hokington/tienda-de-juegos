@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MicroPlay 2 - Registar Usuario</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script type="text/javascript" src="js/registro.js" defer></script>
+  </head>
+  <body>
+    <a href="/">
+      <h1 class="logo">MicroPlay 2</h1>
+    </a>
+
+    <main class="juego">
+      <h2>Formulario de registro</h2>
+      <form
+        class="formulario"
+        id="registro"
+        action="registro.html"
+        method="POST"
+      >
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" name="nombre" id="nombre" required />
+        </div>
+        <div class="campo">
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" name="usuario" id="usuario" required />
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" name="correo" id="correo" required />
+        </div>
+        <div class="campo">
+          <label for="contraseña">Contraseña</label>
+          <input type="password" name="contraseña" id="contraseña" required />
+        </div>
+        <div class="campo">
+          <label for="confirmar">Confirmar contraseña</label>
+          <input type="password" name="confirmar" id="confirmar" required />
+        </div>
+        <div class="campo">
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input type="date" name="nacimiento" id="nacimiento" required />
+        </div>
+        <div class="campo">
+          <label for="direccion">Dirección de despacho</label>
+          <input type="text" name="direccion" id="direccion" />
+        </div>
+        <button class="boton-enviar">Enviar</button>
+      </form>
+    </main>
+  </body>
+</html>

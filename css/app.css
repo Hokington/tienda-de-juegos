@@ -188,3 +188,39 @@ a {
   margin: auto;
   margin-bottom: 40px;
 }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 16px;
+}
+
+.campo {
+  display: block;
+  width: 240px;
+}
+.campo label {
+  display: block;
+}
+
+.campo input {
+  width: 100%;
+  padding: 1px;
+}
+
+.boton-enviar {
+  background-color: var(--secondary);
+  font-size: 20px;
+  padding: 4px 8px;
+  border: 2px solid var(--text);
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 36px;
+  }
+}
