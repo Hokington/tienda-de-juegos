@@ -4,88 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MicroPlay 2 - Inicio</title>
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/nuevo.css" />
   </head>
   <body>
-    <a href="/">
-      <h1 class="logo">MicroPlay 2</h1>
-    </a>
-
-    <section class="hero hero-todos parallax">
-      <h2>Todos los Productos</h2>
-    </section>
-
-    <section class="seccion-categorias">
-      <h2>Categorias</h2>
-      <ul class="lista-categorias">
-        <li><a href="index.html">Todos</a></li>
-        <li><a href="accion.html">Accion</a></li>
-        <li><a href="deportes.html">Deportes</a></li>
-        <li><a href="rol.html">Rol</a></li>
-        <li><a href="terror.html">Terror</a></li>
-        <li><a href="disparos.html">Disparos</a></li>
-      </ul>
-    </section>
-
+    <header>
+      <nav class="header">
+        <a class="logo" href="/index.html">Micro<span>Play 2</span></a>
+        <ul class="nav">
+          <li>
+            <a class="boton-secundario" href="/login/registro.html"
+              >Registrarse</a
+            >
+          </li>
+          <li>
+            <a class="boton-primario" href="/login/iniciar-sesion.html"
+              >Iniciar Sesión</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="categorias">
+          <li><a class="categoria" href="/index.html">Todos</a></li>
+          <li>
+            <a class="categoria" href="/categorias/accion/accion.html"
+              >Acción</a
+            >
+          </li>
+          <li>
+            <a class="categoria" href="/categorias/deportes/deportes.html"
+              >Deportes</a
+            >
+          </li>
+          <li>
+            <a class="categoria" href="/categorias/disparos/disparos.html"
+              >Disparos</a
+            >
+          </li>
+          <li><a class="categoria" href="/categorias/rol/rol.html">Rol</a></li>
+          <li>
+            <a class="categoria" href="/categorias/terror/terror.html"
+              >Terror</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <h2 class="titulo">Todos los juegos</h2>
+      <div class="hero hero-todos parallax">
+        <h1>Todos los Productos</h1>
+      </div>
       <div class="lista-juegos">
-        <a class="card" href="accion1.html">
-          <img src="Imagenes/accion1.jpg" alt="" />
+        <a class="card" href="/categorias/accion/accion1.html">
+          <img src="/Imagenes/juegos/accion1.jpg" alt="" />
           <h3>God of War: Ragnarok</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="accion2.html">
-          <img src="Imagenes/accion2.jpg" alt="" />
+        <a class="card" href="/categorias/accion/accion2.html">
+          <img src="/Imagenes/juegos/accion2.jpg" alt="" />
           <h3>Final Fantasy XVI</h3>
           <span> $ 59.990 </span>
         </a>
 
-        <a class="card" href="deportes1.html">
-          <img src="Imagenes/deportes1.jpg" alt="" />
+        <a class="card" href="/categorias/deportes/deportes1.html">
+          <img src="/Imagenes/juegos/deportes1.jpg" alt="" />
           <h3>EA SPORTS™ FC 24</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="deportes2.html">
-          <img src="Imagenes/deportes2.jpg" alt="" />
+        <a class="card" href="/categorias/deportes/deportes2.html">
+          <img src="/Imagenes/juegos/deportes2.jpg" alt="" />
           <h3>NBA 2K24</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="disparos1.html">
-          <img src="Imagenes/disparos1.jpg" alt="" />
+        <a class="card" href="/categorias/disparos/disparos1.html">
+          <img src="/Imagenes/juegos/disparos1.jpg" alt="" />
           <h3>Call of Duty: Modern Warfare III</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="disparos2.html">
-          <img src="Imagenes/disparos2.jpg" alt="" />
+        <a class="card" href="/categorias/disparos/disparos2.html">
+          <img src="/Imagenes/juegos/disparos2.jpg" alt="" />
           <h3>Battlefield™ 2042</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="rol1.html">
-          <img src="Imagenes/rol1.jpg" alt="" />
+        <a class="card" href="/categorias/rol/rol1.html">
+          <img src="/Imagenes/juegos/rol1.jpg" alt="" />
           <h3>Elden Ring</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="rol2.html">
-          <img src="Imagenes/rol2.jpg" alt="" />
+        <a class="card" href="/categorias/rol/rol2.html">
+          <img src="/Imagenes/juegos/rol2.jpg" alt="" />
           <h3>Baldur's Gate 3</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="terror1.html">
-          <img src="Imagenes/terror1.jpg" alt="" />
+        <a class="card" href="/categorias/terror/terror1.html">
+          <img src="/Imagenes/juegos/terror1.jpg" alt="" />
           <h3>Silent Hill 2</h3>
           <span>$ 59.990</span>
         </a>
 
-        <a class="card" href="terror2.html">
-          <img src="Imagenes/terror2.jpg" alt="" />
+        <a class="card" href="/categorias/terror/terror2.html">
+          <img src="/Imagenes/juegos/terror2.jpg" alt="" />
           <h3>Until Dawn</h3>
           <span>$ 59.990</span>
         </a>
