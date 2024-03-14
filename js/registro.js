@@ -1,9 +1,12 @@
 const formulario = document.querySelector("#registro");
 
+document.querySelector('#limpiar').addEventListener('click', (e) => {
+  formulario.reset();
+})
+
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   revisarFormulario();
-  
 });
 
 function revisarFormulario() {
@@ -11,8 +14,6 @@ function revisarFormulario() {
   const contraseña1 = formData.get('contraseña')
   const contraseña2 = formData.get('confirmar')
   const nacimiento = formData.get('nacimiento')
-
-
   const fechaNacimiento = new Date(nacimiento);
   const fechaActual = new Date();
 
