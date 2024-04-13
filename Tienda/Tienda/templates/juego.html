@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<main class="descripcion">
+  <div class="juego">
+    <h1>{{ juego.juego_nombre }}</h1>
+    <img src="{% static 'media/juegos/' %}{{juego.imagen}}""
+    alt="{{juego.juego_nombre}}" />
+    <div>
+      <p>{{ juego.descripcion}}</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut delectus
+        voluptas repudiandae sequi at, vel dignissimos. Cumque in reprehenderit
+        consequatur id incidunt, voluptatem esse modi. Temporibus aliquam fugiat
+        odio perferendis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+        veniam?
+      </p>
+      <span>$ {{juego.precio}} </span>
+    </div>
+  </div>
+</main>
+{% endblock %}

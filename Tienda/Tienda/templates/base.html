@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Inicio{% endblock %} - MicroPlay 2</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% block styles %}{% endblock %} {% block script %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav class="header">
+        <a class="logo" href="{% url 'index' %}">Micro<span>Play 2</span></a>
+        <ul class="nav">
+          <li>
+            <a class="boton-secundario" href="{% url 'registro' %}"
+              >Registrarse</a
+            >
+          </li>
+          <li>
+            <a class="boton-primario" href="{% url 'login' %}"
+              >Iniciar Sesión</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="categorias">
+          <li><a class="categoria" href="{% url 'index' %}">Todos</a></li>
+          {% for categoria in categorias %}
+          <li>
+            <a
+              class="categoria"
+              href="{% url 'categoria' categoria.categoria_slug %}"
+              >{{ categoria.categoria_nombre }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block hero %} {% endblock %} {% block content %} {% endblock %}
+    </main>
+  </body>
+</html>

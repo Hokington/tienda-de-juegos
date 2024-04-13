@@ -1,0 +1,27 @@
+[
+    {
+        "titulo": "Acción",
+        "url": "accion",
+        "clase": "hero-accion"
+    },
+    {
+        "titulo": "Deportes",
+        "url": "deportes",
+        "clase": "hero-deportes"
+    },
+    {
+        "titulo": "Disparos",
+        "url": "disparos",
+        "clase": "hero-disparos"
+    },
+    {
+        "titulo": "Rol",
+        "url": "rol",
+        "clase": "hero-rol"
+    },
+    {
+        "titulo": "Terror",
+        "url": "terror",
+        "clase": "hero-terror"
+    }
+]

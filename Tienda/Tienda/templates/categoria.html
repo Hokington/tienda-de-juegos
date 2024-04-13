@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} {% block hero %} {% if categoria %}
+<div class="hero hero-{{ categoria.categoria_slug }} parallax">
+  <h1>Juegos de {{ categoria.categoria_nombre }}</h1>
+</div>
+{% endif %} {% endblock %} {% block content %}
+<div class="lista-juegos">
+  {% for juego in juegos %}
+  <a class="card" href="{% url 'juego' juego.juego_id %}">
+    <img
+      src="{% static 'media/juegos/' %}{{juego.imagen}}"
+      alt="{{ juego.juego_nombre }}"
+    />
+    <h3>{{ juego.juego_nombre }}</h3>
+    <span>$ {{ juego.precio }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

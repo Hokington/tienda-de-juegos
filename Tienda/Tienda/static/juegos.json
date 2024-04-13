@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Juego 1",
+        "descripcion": "Descripción del juego 1",
+        "imagen": "accion1.jpg",
+        "url": "juego",
+        "precio": "$50.000"
+    },
+    {
+        "nombre": "Juego 2",
+        "descripcion": "Descripción del juego 2",
+        "imagen": "accion2.jpg",
+        "url": "juego",
+        "precio": "$50.000"
+    },
+    {
+        "nombre": "Juego 3",
+        "descripcion": "Descripción del juego 3",
+        "imagen": "imagen3.jpg",
+        "url": "juego-2",
+        "precio": "$50.000"
+    }
+]

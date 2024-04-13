@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} {% block hero %}
+<div class="hero hero-todos parallax">
+  <h1>Todos los Productos</h1>
+</div>
+{% endblock %} {% block content %}
+<div class="lista-juegos">
+  {% for juego in juegos %}
+  <a class="card" href="{% url 'juego' juego.juego_id %}">
+    <img
+      src="{% static 'media/juegos/' %}{{juego.imagen}}"
+      alt="{{ juego.juego_nombre }}"
+    />
+    <h3>{{ juego.juego_nombre }}</h3>
+    <span>$ {{ juego.precio }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}
