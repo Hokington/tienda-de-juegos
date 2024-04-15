@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<main class="descripcion">
+  <div class="admin-panel">
+    <h1>Crear juego nuevo</h1>
+    {% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+    {% endif %}
+    <form style="display: flex; flex-direction: column; gap: 12px;" action="{% url 'juego_create' %}" method="post"">
+        {% csrf_token %}
+        
+        {{ form.as_p }}  
+        
+        <button type="submit" class="boton-primario
+        ">Crear Juego</button>
+    </form>
+  </div>
+</main>
+
+{% endblock %}

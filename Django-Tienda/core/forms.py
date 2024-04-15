@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from datetime import date
-from .models import User, RolUser  # Importa el modelo User y RolUser
+from .models import User, RolUser, Juego, Categoria  # Importa el modelo User y RolUser
 
 class RegistroForm(forms.Form):
     nombre = forms.CharField(label='Nombre Completo', max_length=80, widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -73,4 +73,16 @@ class EditProfileForm(forms.ModelForm):
             'nombre_usuario': forms.TextInput(attrs={'class': 'form-control'}),
             'direccion': forms.TextInput(attrs={'class': 'form-control'}),
             'contrasena': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+class JuegoForm(forms.ModelForm):
+    class Meta:
+        model = Juego
+        fields = ['juego_nombre', 'descripcion', 'precio', 'imagen', 'categoria_id']
+        widgets = {
+            'juego_nombre': forms.TextInput(attrs={'class': 'form-control'}),
+            'descripcion': forms.TextInput(attrs={'class': 'form-control'}),
+            'precio': forms.TextInput(attrs={'class': 'form-control'}),
+            'imagen': forms.ClearableFileInput(),
+            'categoria_id': forms.Select(attrs={'class': 'form-control'}),
         }

@@ -25,7 +25,7 @@ class Categoria(models.Model):
     categoria_nombre = models.CharField(max_length=100)
     categoria_slug = models.CharField(max_length=100)
     
-    def str(self):
+    def __str__(self):
         return self.categoria_nombre
 
 class Juego(models.Model):
@@ -33,7 +33,7 @@ class Juego(models.Model):
     juego_nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=400)
     precio = models.PositiveIntegerField()
-    imagen = models.ImageField(upload_to='juegos/')
+    imagen = models.ImageField(upload_to='juegos/', null=True, blank=True)
     categoria_id = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def str(self):

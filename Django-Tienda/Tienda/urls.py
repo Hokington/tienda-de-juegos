@@ -28,6 +28,8 @@ urlpatterns = [
     path('juego/<int:juego_id>', views.juego, name="juego"),
 
     path('mi-perfil/', views.mi_perfil, name='mi-perfil'),
-    path('admin-panel/', views.admin_panel, name='admin-panel')
-
+    path('admin-panel/', views.admin_panel, name='admin-panel'),
+    path('admin-panel/juegos/nuevo/', views.juego_create, name='juego_create'),
+    path('admin-panel/juegos/<int:pk>/editar', views.juego_update, name='juego_update' ),
+    path('admin-panel/juegos/<int:pk>/borrar', views.juego_delete, name='juego_delete' ),
 ]

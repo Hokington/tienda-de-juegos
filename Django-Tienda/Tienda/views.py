@@ -1,7 +1,7 @@
 import json
 from django.shortcuts import render, get_object_or_404, redirect
 from core.models import Juego, Categoria, User, RolUser
-from core.forms import RegistroForm, LoginForm, EditProfileForm
+from core.forms import RegistroForm, LoginForm, EditProfileForm, JuegoForm
 from django.contrib import messages
 
 def index(request):
@@ -72,6 +72,19 @@ def logout_view(request):
     request.session.clear()
     return redirect('index')
 
+
+def role_required(required_role_id):
+    def decorator(view_func):
+        def _wrapped_view(request, *args, **kwargs):
+            rol_id = request.session.get('rol_id')
+            if not rol_id or rol_id != required_role_id:
+                return redirect('index')
+            return view_func(request, *args, **kwargs)
+        return _wrapped_view
+    return decorator
+
+
+
 def mi_perfil(request):
     user_id = request.session.get('user_id')
     rol_id = request.session.get('rol_id')
@@ -91,14 +104,57 @@ def mi_perfil(request):
         
     return render(request, 'mi-perfil.html', {"form": form})
 
+@role_required(2)
 def admin_panel(request):
     rol_id = request.session.get('rol_id')
     if not rol_id or not rol_id == 2:
         return redirect('index')
     
     juegos = Juego.objects.all()
-
     context = {
         'juegos': juegos
     }
     return render(request, 'admin-panel.html', context)
+
+@role_required(2)
+def juego_create(request):
+    if request.method == 'POST':
+        form = JuegoForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'El Juego ha sido creado con éxito.')
+            return redirect('admin-panel')
+        else:
+            messages.error(request, 'Hubo un error al crear el juego. Por favor, verifica el formulario.')
+    else:
+        form = JuegoForm()
+
+    return render(request, 'juego-create.html', {'form': form})
+
+@role_required(2)
+def juego_update(request, pk):
+    juego = get_object_or_404(Juego, pk=pk)
+    if request.method == 'POST':
+        form = JuegoForm(request.POST, instance=juego)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'El juego ha sido actualizado con éxito.')
+            return redirect('admin-panel')
+    else:
+        form = JuegoForm(instance=juego)
+        
+    context = {
+        "form": form,
+        "juego": juego
+    }
+    return render(request, 'juego-update.html', context)
+
+@role_required(2)
+def juego_delete(request, pk):
+    juego = get_object_or_404(Juego, pk=pk)
+    if request.method == 'POST':
+        juego.delete()
+        messages.success(request, 'El juego ha sido eliminado con éxito.')
+        return redirect('admin-panel')
+
+    return redirect('admin-panel')
