@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% load static %} {% block script %}
+<script
+  type="text/javascript"
+  src="{% static 'js/registro.js' %}"
+  defer
+></script>
+{% endblock %} {% block content %}
+<main class="descripcion">
+  <div class="formulario-registro">
+    <h2>Formulario de <span class="azul">Registro</span></h2>
+    <div class="alert">
+      {% for error in form.non_field_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    <form
+      class="formulario"
+      id="registro"
+      action="{% url 'registro' %}"
+      method="POST"
+    >
+      {% if form.non_field_errors %} {% endif %} {% csrf_token %}
+      <div class="campo">
+        <label for="{{ form.nombre.id_for_label }}"
+          >{{ form.nombre.label }}</label
+        >
+        {{ form.nombre }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.nombre_usuario.id_for_label }}"
+          >{{ form.nombre_usuario.label }}</label
+        >
+        {{ form.nombre_usuario }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.email.id_for_label }}"
+          >{{ form.email.label }}</label
+        >
+        {{ form.email }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.direccion.id_for_label }}"
+          >{{ form.direccion.label }}</label
+        >
+        {{ form.direccion }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.fecha_nacimiento.id_for_label }}"
+          >{{ form.fecha_nacimiento.label }}</label
+        >
+        {{ form.fecha_nacimiento }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.password1.id_for_label }}"
+          >{{ form.password1.label }}</label
+        >
+        {{ form.password1 }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.password2.id_for_label }}"
+          >{{ form.password2.label }}</label
+        >
+        {{ form.password2 }}
+      </div>
+
+      <button id="limpiar" type="button" class="boton-secundario">
+        Limpiar campos
+      </button>
+      <button type="submit" class="boton-primario">Enviar</button>
+    </form>
+  </div>
+</main>
+
+{% endblock %}

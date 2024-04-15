@@ -125,13 +125,6 @@ main {
   color: var(--primary);
 }
 
-.nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 0;
-  gap: 12px;
-  font-size: var(--md);
-}
 .categorias {
   background-color: var(--background2);
   padding: 10px;
@@ -313,7 +306,98 @@ main {
   margin-top: 6px;
 }
 
+.alert {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: var(--base);
+  background-color: rgb(211, 34, 34);
+  color: var(--background2);
+  padding: 0px 6px;
+  border-radius: 4px;
+}
+
+.success {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: var(--base);
+  background-color: rgb(49, 178, 32);
+  color: var(--background2);
+  padding: 0px 6px;
+  border-radius: 4px;
+}
+.alert p {
+  padding: 3px 0px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 0;
+  gap: 12px;
+  font-size: var(--md);
+}
+
+.admin-panel {
+  background-color: var(--background);
+  border: 1px solid var(--secondary);
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 860px;
+  gap: 12px;
+  place-items: center;
+}
+
+.admin-panel h2 {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.admin-panel section {
+  border: 1px solid var(--secondary);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+table {
+  border: 1px solid var(--secondary);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-weight: 700;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+td {
+  max-width: 200px; /* Ajusta este valor según tus necesidades */
+  overflow: hidden; /* Oculta el texto que se desborda */
+  white-space: nowrap; /* Impide el salto de línea */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos al texto que se desborda */
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(222, 220, 255, 0.4);
+}
+
 @media only screen and (min-width: 640px) {
+  .nav {
+    flex-direction: row;
+  }
+
   .header {
     padding: 6px 6%;
     display: flex;

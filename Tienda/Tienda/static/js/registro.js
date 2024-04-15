@@ -1,9 +1,11 @@
+
 const formulario = document.querySelector("#registro");
 
 document.querySelector('#limpiar').addEventListener('click', (e) => {
   formulario.reset();
 })
 
+/*
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   revisarFormulario();
@@ -49,5 +51,6 @@ function revisarFormulario() {
     return
   }
 
-  alert('Creando Usuario ...')
+  formData.submit()
 }
+*/

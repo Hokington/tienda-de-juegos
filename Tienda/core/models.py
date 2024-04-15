@@ -9,10 +9,13 @@ class RolUser(models.Model):
 
 class User(models.Model):
     id = models.AutoField(primary_key=True, verbose_name='ID Usuario',)
+    nombre = models.CharField(max_length=80, verbose_name='Nombre completo', )
+    nombre_usuario = models.CharField(max_length=100, verbose_name='Nombre de Usuario',)
+    direccion = models.CharField(max_length=100, verbose_name='Dirección',)
+    fecha_nacimiento = models.DateField(verbose_name='Fecha de Nacimiento')
     email = models.EmailField(max_length=50, verbose_name='Correo Electrónico', unique=True)
-    nombre_usuario = models.CharField(max_length=100, verbose_name='Nombre de Usuario', unique=True)
     contrasena = models.CharField(max_length=100, verbose_name='Contraseña')
-    rol_id = models.ForeignKey(RolUser, on_delete=models.SET_NULL, null=True, related_name='usuarios')
+    rol_id = models.ForeignKey(RolUser, on_delete=models.CASCADE)
 
     def str(self):
         return self.nombre_usuario

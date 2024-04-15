@@ -21,9 +21,13 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('', views.index, name='registro'),
-    path('', views.index, name='login'),
+    path('registro/', views.registro, name='registro'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout_view, name='logout'),
     path('categoria/<str:categoria_slug>', views.categoria, name='categoria'),
     path('juego/<int:juego_id>', views.juego, name="juego"),
+
+    path('mi-perfil/', views.mi_perfil, name='mi-perfil'),
+    path('admin-panel/', views.admin_panel, name='admin-panel')
 
 ]

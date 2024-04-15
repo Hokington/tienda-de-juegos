@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<main class="descripcion">
+  <div class="formulario-registro">
+    <h2>Editar mi <span class="azul">Información</span></h2>
+    {% if messages %}
+    <div>
+      {% for message in messages %}
+      <p class="success">{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="alert">
+      {% for error in form.non_field_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    <form
+      class="formulario"
+      id="edit"
+      action="{% url 'mi-perfil' %}"
+      method="POST"
+    >
+      {% if form.non_field_errors %} {% endif %} {% csrf_token %} {{ form }}
+
+      <button type="submit" class="boton-primario">Actualizar</button>
+    </form>
+  </div>
+</main>
+
+{% endblock %}

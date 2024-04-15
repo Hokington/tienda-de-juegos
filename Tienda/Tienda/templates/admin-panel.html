@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<main class="descripcion">
+  <div class="admin-panel">
+    <h2>Panel de <span class="azul">Administración</span></h2>
+    <section>
+      <h3>Lista de juegos</h3>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Imagen URL</th>
+          <th>Categoría</th>
+        </tr>
+        {% for juego in juegos %}
+        <tr>
+          <td>{{juego.juego_id}}</td>
+          <td>{{juego.juego_nombre}}</td>
+          <td>
+            {{juego.descripcion}} Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Culpa fuga, sunt vero eligendi quam laudantium
+            modi? Fugiat quos nesciunt doloremque debitis temporibus libero sit
+            quidem repudiandae! Consequatur consequuntur itaque enim laborum
+            veritatis consectetur, cumque repellat fuga impedit magni laudantium
+            dolor.
+          </td>
+          <td>{{juego.precio}}</td>
+          <td>{{juego.imagen}}</td>
+          <td>{{juego.categoria_id.categoria_nombre}}</td>
+          <td>
+            <form action="">
+                <input type="hidden" value="{{juego.juego_id}}"  name="" id="">
+                <button>EDITAR</button></td>
+            </form>
+        </tr>
+        {% endfor %}
+      </table>
+    </section>
+    <section>Alo</section>
+  </div>
+</main>
+
+{% endblock %}

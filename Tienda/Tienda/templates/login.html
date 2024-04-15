@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<main class="descripcion">
+  <div class="formulario-registro">
+    <h2>Iniciar <span class="azul">Sesión</span></h2>
+    <div class="alert">
+      {% for error in form.non_field_errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    <form
+      class="formulario"
+      id="login"
+      action="{% url 'login' %}"
+      method="POST"
+    >
+      {% if form.non_field_errors %} {% endif %} {% csrf_token %}
+      <div class="campo" style="grid-column: 2">
+        <label for="{{ form.email.id_for_label }}"
+          >{{ form.email.label }}</label
+        >
+        {{ form.email }}
+      </div>
+
+      <div class="campo" style="grid-column: 2">
+        <label for="{{ form.contrasena.id_for_label }}"
+          >{{ form.contrasena.label }}</label
+        >
+        {{ form.contrasena }}
+      </div>
+
+      <button type="submit" style="grid-column: 2" class="boton-primario">
+        Enviar
+      </button>
+    </form>
+  </div>
+</main>
+
+{% endblock %}
