@@ -179,6 +179,15 @@ main {
     url("../media/categorias/rol.jpg");
 }
 
+.hero-mmo {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../media/categorias/mmo.jpg");
+}
+
+.hero-ofertas {
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+    url("../media/categorias/ofertas.avif");
+}
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -413,6 +422,7 @@ tr:nth-child(even) {
   color: var(--background2);
   border-radius: 6px;
 }
+
 @media only screen and (min-width: 640px) {
   .juegos-header {
     flex-direction: row;

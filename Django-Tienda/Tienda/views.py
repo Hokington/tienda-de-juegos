@@ -1,8 +1,11 @@
 import json
+import requests
 from django.shortcuts import render, get_object_or_404, redirect
 from core.models import Juego, Categoria, User, RolUser
 from core.forms import RegistroForm, LoginForm, EditProfileForm, JuegoForm
 from django.contrib import messages
+from rest_framework import generics
+from .serializers import categorias, juegos
 
 def index(request):
     juegos = Juego.objects.all()
@@ -158,3 +161,43 @@ def juego_delete(request, pk):
         return redirect('admin-panel')
 
     return redirect('admin-panel')
+
+class CategoriaListView(generics.ListAPIView):
+    queryset = Categoria.objects.all()
+    serializer_class = categorias.CategoriaSerializer
+
+class CategoriaDetailView(generics.RetrieveAPIView):
+    queryset = Categoria.objects.all()
+    serializer_class = categorias.CategoriaSerializer
+
+class JuegoListView(generics.ListAPIView):
+    queryset = Juego.objects.all()
+    serializer_class = juegos.CategoriaSerializer
+
+class JuegoDetailView(generics.RetrieveAPIView):
+    queryset = Juego.objects.all()
+    serializer_class = juegos.CategoriaSerializer
+
+def mmo_api(request):
+
+    response = requests.get('https://www.mmobomb.com/api1/games?sort-by=relevance')
+    if response.status_code == 200:
+        datos_api = response.json()
+
+    context = {
+        "juegos": datos_api
+    }
+        
+    return render(request, 'mmo.html', context)
+
+def ofertas_api(request):
+
+    response = requests.get('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15')
+    if response.status_code == 200:
+        datos_api = response.json()
+
+    context = {
+        "juegos": datos_api
+    }
+        
+    return render(request, 'ofertas.html', context)

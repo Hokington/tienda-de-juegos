@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% load static %} {% block hero %}
+<div class="hero hero-mmo parallax">
+  <h1>Juegos MMO</h1>
+</div>
+{% endblock %} {% block content %}
+<div class="lista-juegos">
+  {% for juego in juegos %}
+  <a class="card" target="_blank" href="{{ juego.game_url }}">
+    <img src="{{ juego.thumbnail }}" alt="{{ juego.title }}" />
+    <h3 style="font-size: 24px">{{ juego.title }}</h3>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Género: <span>{{ juego.genre }}</span>
+    </p>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Plataforma: <span>{{ juego.platform }}</span>
+    </p>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Editor: <span>{{ juego.publisher }}</span>
+    </p>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Desarrollador: <span>{{ juego.developer }}</span>
+    </p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

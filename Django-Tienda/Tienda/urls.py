@@ -32,4 +32,13 @@ urlpatterns = [
     path('admin-panel/juegos/nuevo/', views.juego_create, name='juego_create'),
     path('admin-panel/juegos/<int:pk>/editar', views.juego_update, name='juego_update' ),
     path('admin-panel/juegos/<int:pk>/borrar', views.juego_delete, name='juego_delete' ),
+
+    path('api/categorias/', views.CategoriaListView.as_view(), name='categoria-list'),
+    path('api/categorias/<int:pk>/', views.CategoriaDetailView.as_view(), name='categoria-detail'),
+    
+    path('api/juegos/', views.JuegoListView.as_view(), name='categoria-list'),
+    path('api/juegos/<int:pk>/', views.JuegoDetailView.as_view(), name='categoria-detail'),
+
+    path('mmo/', views.mmo_api, name='mmo'),
+    path('ofertas/', views.ofertas_api, name='ofertas'),
 ]

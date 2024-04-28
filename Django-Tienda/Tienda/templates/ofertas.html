@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %} {% block hero %}
+<div class="hero hero-mmo parallax">
+  <h1>Juegos en Oferta</h1>
+</div>
+{% endblock %} {% block content %}
+<div class="lista-juegos">
+  {% for juego in juegos %}
+  <a class="card" target="_blank" href="#">
+    <img src="{{ juego.thumb }}" alt="{{ juego.title }}" />
+    <h3 style="font-size: 24px">{{ juego.title }}</h3>
+    <p style="font-weight: 700; font-size: 20px; margin: 0px">
+      Precio oferta:
+      <span style="font-size: 20px; margin: 0px">{{ juego.salePrice }}</span>
+    </p>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Precio normal: <span>{{ juego.normalPrice }}</span>
+    </p>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Te ahorras: <span>{{ juego.savings }}%</span>
+    </p>
+    <p style="font-weight: 700; font-size: 14px; margin: 0px">
+      Puntuación: <span>{{ juego.metacriticScore }}</span>
+    </p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}
